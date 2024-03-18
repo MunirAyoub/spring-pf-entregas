@@ -22,7 +22,16 @@ public class Endereco {
             initialValue = 1,
             allocationSize = 1
     )
+    @Column(name = "ID_ENDERECO")
     private Long id;
 
+    @Column(name = "CEP_ENDERECO")
+    private String cep;
+
+    @Column(name = "NR_ENDERECO")
+    private String numero;
+
+    @Column(name = "COMPL_ENDERECO")
+    private String complemento;
 
 }
