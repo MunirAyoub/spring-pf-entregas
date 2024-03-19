@@ -21,7 +21,11 @@ import java.util.Set;
 public class Viagem {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "" )
+
+    @Column(name = "ID_VIAGEM")
     private Long id;
+
+
 
 
 }
