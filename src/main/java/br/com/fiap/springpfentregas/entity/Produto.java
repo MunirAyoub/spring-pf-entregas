@@ -35,7 +35,7 @@ public class Produto {
     @Column(name = "PESO_PRODUTO")
     private Float peso;
 
-    @Column(name = "LARGU_PRODUTO")
+    @Column(name = "LARG_PRODUTO")
     private Float largura;
 
     @Column(name = "ALT_PRODUTO")
@@ -43,5 +43,7 @@ public class Produto {
 
     @Column(name = "PRFND_PRODUTO")
     private Float profundidade;
+
+
 
 }

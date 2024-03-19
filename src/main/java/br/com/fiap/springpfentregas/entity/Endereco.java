@@ -14,11 +14,11 @@ import lombok.NoArgsConstructor;
 @Builder
 
 public class Endereco {
-
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "RG_ENDERECO")
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "SQ_ENDERECO")
     @SequenceGenerator(
-            name = "RG_ENDERECO",
-            sequenceName = "RG_ENDERECO",
+            name = "SQ_ENDERECO",
+            sequenceName = "SQ_ENDERECO",
             initialValue = 1,
             allocationSize = 1
     )
@@ -34,4 +34,8 @@ public class Endereco {
     @Column(name = "COMPL_ENDERECO")
     private String complemento;
 
+
+    @ManyToOne
+    @JoinColumn(name = "ID_END_PESSOA", referencedColumnName = "ID_PESSOA", foreignKey = @ForeignKey(name = "FK_ENDERECO_PESSOA"))
+    private Pessoa pessoa;
 }
