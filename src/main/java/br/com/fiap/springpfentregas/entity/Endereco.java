@@ -25,17 +25,21 @@ public class Endereco {
     @Column(name = "ID_ENDERECO")
     private Long id;
 
-    @Column(name = "CEP_ENDERECO")
-    private String cep;
-
     @Column(name = "NR_ENDERECO")
     private String numero;
 
-    @Column(name = "COMPL_ENDERECO")
+    @Column(name = "CEP")
+    private String cep;
+
+    @Column(name = "COMPLEMENTO")
     private String complemento;
 
 
     @ManyToOne
-    @JoinColumn(name = "ID_END_PESSOA", referencedColumnName = "ID_PESSOA", foreignKey = @ForeignKey(name = "FK_ENDERECO_PESSOA"))
+    @JoinColumn(name = "ID_ENDERECO_PESSOA",
+            referencedColumnName = "ID_PESSOA",
+            foreignKey = @ForeignKey(name = "FK_PESSOA_ENDERECO")
+    )
+
     private Pessoa pessoa;
 }

@@ -25,10 +25,10 @@ public class Pessoa {
     @Column(name = "ID_PESSOA")
     private Long Id;
 
-    @Column(name = "ID_NOME")
-    private String nome;
-
-    @Column(name = "ID_PESSOA")
+    @Column(name = "EMAIL")
     private String email;
+
+    @Column(name = "NM_PESSOA")
+    private String nome;
 
 }

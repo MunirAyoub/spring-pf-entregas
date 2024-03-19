@@ -5,6 +5,7 @@ spring:
     username: rm550893
   jpa:
     hibernate:
-      ddl-auto: none
-    open-in-view: false
-    show-sql: false
+      ddl-auto: create
+    open-in-view: true
+    show-sql: true
+    generate-ddl: true

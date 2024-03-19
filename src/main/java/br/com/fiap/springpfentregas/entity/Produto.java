@@ -26,24 +26,23 @@ public class Produto {
     @Column(name = "ID_PRODUTO")
     private Long Id;
 
-    @Column(name = "ETIQUETA_PRODUTO")
-    private String etiqueta;
+
+    @Column(name = "PESO")
+    private Float peso;
 
     @Column(name = "NM_PRODUTO")
     private String nome;
 
-    @Column(name = "PESO_PRODUTO")
-    private Float peso;
+    @Column(name = "ETIQUETA")
+    private String etiqueta;
 
-    @Column(name = "LARG_PRODUTO")
-    private Float largura;
-
-    @Column(name = "ALT_PRODUTO")
-    private Float altura;
-
-    @Column(name = "PRFND_PRODUTO")
+    @Column(name = "PROFUNDIDADE")
     private Float profundidade;
 
+    @Column(name = "LARGURA")
+    private Float largura;
 
+    @Column(name = "ALTURA")
+    private Float altura;
 
 }
