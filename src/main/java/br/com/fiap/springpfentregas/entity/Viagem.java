@@ -82,6 +82,16 @@ public class Viagem {
     private List<Produto> produtos = new ArrayList<>();
 
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(
+            name = "TB_PESSOA",
+            referencedColumnName = "ID_PESSOA",
+            foreignKey = @ForeignKey(
+                    name = "FK_PESSOA_VIAGEM"
+            )
+    )
+
+    private Pessoa cliente;
 
     @ManyToOne
     @JoinColumn(name = "ID_DESTINO",
@@ -105,6 +115,5 @@ public class Viagem {
     @Column(name = "CHEGADA")
     private LocalDateTime chegada;
 
-    private Pessoa cliente;
 
 }
